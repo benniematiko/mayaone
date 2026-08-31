@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import Services from '../../components/services/Services';
-import WhyUs from '../../components/whyUs/WhyUs';
+import WhyUs from '../../components/whyus/WhyUs';
 import HowItWorks from '../../components/howItWorks/HowItWorks';
 import Testimonials from '../../components/testimonials/Testimonials';
 import Contact from '../../components/contact/Contact';
