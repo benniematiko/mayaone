@@ -1,0 +1,143 @@
+.why-us-section {
+  padding: 5rem 3rem;
+  background-color: var(--bg-surface);
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.why-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.why-us-content {
+  flex: 1;
+}
+
+.why-us-badge {
+  display: inline-block;
+  background-color: var(--brand-soft-blue);
+  color: var(--brand-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.why-us-title {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.why-us-title span {
+  color: var(--brand-pink);
+}
+
+.why-us-description {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.why-us-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.why-us-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.why-us-check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--brand-light-pink);
+  color: var(--brand-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.why-us-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.25rem 0;
+}
+
+.why-us-item-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Stats Container Box on Right */
+.why-us-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.stats-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, var(--brand-light-pink) 0%, var(--brand-soft-blue) 100%);
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--brand-blue);
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .why-us-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .why-us-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .why-us-title {
+    font-size: 2rem;
+  }
+}
