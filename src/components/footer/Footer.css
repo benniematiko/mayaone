@@ -1,66 +1,122 @@
+/* ==========================================
+   Footer Base Container
+   ========================================== */
 .footer {
-  background-color: var(--brand-dark-blue);
+  background-color: var(--brand-dark-blue, #072a4a);
   color: #ffffff;
-  padding: 4rem 3rem 1.5rem 3rem;
+  padding: 5rem 4rem 2rem 4rem;
   font-size: 0.95rem;
+  border-top: 4px solid var(--brand-pink, #ff69b4);
+  position: relative;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* Brand Column */
-.footer-brand .footer-logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--brand-pink);
-  text-decoration: none;
+/* ==========================================
+   Brand & Logo Column
+   ========================================== */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-link {
   display: inline-block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  text-decoration: none;
 }
 
-.footer-brand .footer-logo span {
-  color: var(--brand-blue);
+/* White Logo Styling */
+.footer-white-logo {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Ensures logos with dark elements stay pure white */
+}
+
+/* Fallback Text Badge (Sharp Edge) */
+.footer-logo-fallback {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.footer-logo-fallback span {
+  color: var(--brand-pink, #ff69b4);
+  font-style: italic;
 }
 
 .footer-brand-text {
-  color: #cbd5e1;
+  color: #a0aec0;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  max-width: 320px;
+  margin-bottom: 1.8rem;
+  max-width: 340px;
+  font-size: 0.95rem;
 }
 
+/* Regional Hub Indicators */
 .footer-locations {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  color: #94a3b8;
-  font-size: 0.88rem;
+  gap: 0.5rem;
 }
 
-/* Column Headers & Lists */
+.footer-locations-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--brand-pink, #ff69b4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.location-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.location-tag {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0px; /* Sharp corners */
+  font-weight: 600;
+}
+
+/* ==========================================
+   Column Headers & Nav Links
+   ========================================== */
 .footer-column-title {
-  font-size: 1.1rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
   position: relative;
+  letter-spacing: 0.02em;
 }
 
 .footer-column-title::after {
   content: '';
   display: block;
-  width: 30px;
+  width: 32px;
   height: 2px;
-  background-color: var(--brand-pink);
+  background-color: var(--brand-pink, #ff69b4);
   margin-top: 0.4rem;
-  border-radius: 2px;
+  border-radius: 0px; /* Sharp accent bar */
 }
 
 .footer-links {
@@ -69,58 +125,69 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.75rem;
 }
 
 .footer-links a {
-  color: #cbd5e1;
+  color: #a0aec0;
   text-decoration: none;
-  transition: color 0.25s ease;
+  font-size: 0.92rem;
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: var(--brand-pink);
+  color: #ffffff;
 }
 
-/* Contact Column Info */
+/* ==========================================
+   Contact Column Items
+   ========================================== */
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.8rem;
-  color: #cbd5e1;
-  margin-bottom: 0.9rem;
+  gap: 0.75rem;
+  color: #a0aec0;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
+.contact-icon {
+  font-size: 1rem;
+}
+
 .footer-contact-item a {
-  color: #cbd5e1;
+  color: #a0aec0;
   text-decoration: none;
-  transition: color 0.25s ease;
+  transition: color 0.2s ease;
 }
 
 .footer-contact-item a:hover {
-  color: var(--brand-pink);
+  color: #ffffff;
 }
 
-/* Bottom Bar */
+/* ==========================================
+   Bottom Legal Bar
+   ========================================== */
 .footer-bottom {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding-top: 1.5rem;
+  padding-top: 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #94a3b8;
-  font-size: 0.85rem;
+  color: #718096;
+  font-size: 0.82rem;
 }
 
 .footer-legal-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .footer-legal-links a {
-  color: #94a3b8;
+  color: #718096;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -129,17 +196,23 @@
   color: #ffffff;
 }
 
-/* Responsive Styles */
-@media (max-width: 900px) {
+.legal-divider {
+  color: #4a5568;
+}
+
+/* ==========================================
+   Responsive Layout
+   ========================================== */
+@media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 600px) {
   .footer {
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    padding: 3.5rem 1.5rem 1.5rem 1.5rem;
   }
 
   .footer-container {
@@ -149,7 +222,7 @@
 
   .footer-bottom {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.8rem;
     text-align: center;
   }
 }

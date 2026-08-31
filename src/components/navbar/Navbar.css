@@ -1,161 +1,240 @@
-:root {
-  --brand-pink: #ff69b4;
-  --brand-pink-hover: #e05599;
-  --brand-light-pink: #fff0f5;
-  --brand-blue: #1e90ff;
-  --brand-dark-blue: #0b4f8a;
-  --brand-soft-blue: #e6f2ff;
-  --text-dark: #2d3748;
-}
-
-/* Header Container */
-.header-wrapper {
-  width: 100%;
+/* ==========================================
+   Navbar Wrapper & Sticky Container
+   ========================================== */
+.navbar-container {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
-/* Top Utility Bar */
+/* ==========================================
+   Top Contact Bar
+   ========================================== */
 .top-bar {
-  background-color: var(--brand-dark-blue);
+  background-color: var(--brand-dark-blue-accent, #083c6b);
   color: #ffffff;
-  padding: 0.5rem 3rem;
   font-size: 0.85rem;
+  padding: 0.4rem 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.top-bar-locations {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
+.top-bar-locations,
 .top-bar-contact {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 0.6rem;
 }
 
-.top-bar a {
+.top-bar-link {
   color: #ffffff;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.top-bar a:hover {
-  opacity: 0.8;
+.top-bar-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
 }
 
-.top-bar-divider {
-  color: var(--brand-pink);
-  font-weight: bold;
+.separator {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
 }
 
-/* Main Navbar */
-.navbar {
+/* ==========================================
+   Main Navbar Header
+   ========================================== */
+.navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background-color: #ffffff;
-  border-bottom: 2px solid var(--brand-light-pink);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  padding: 0.9rem 3rem;
+  background-color: var(--brand-dark-blue, #0b4f8a);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Logo Styling */
+/* ==========================================
+   Logo Area
+   ========================================== */
 .navbar-logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--brand-pink);
-  text-decoration: none;
-  letter-spacing: -0.5px;
-}
-
-.navbar-logo span {
-  color: var(--brand-blue);
-}
-
-/* Navigation Links */
-.navbar-links {
   display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-fallback-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.logo-fallback-text span {
+  color: var(--brand-pink, #ff69b4);
+}
+
+/* ==========================================
+   Desktop Navigation Links
+   ========================================== */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   list-style: none;
-  gap: 2.5rem;
   margin: 0;
   padding: 0;
 }
 
-.navbar-links a {
+.nav-link {
+  color: #ffffff;
   text-decoration: none;
-  color: var(--text-dark);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: color 0.25s ease;
 }
 
-.navbar-links a:hover {
-  color: var(--brand-pink);
+.nav-link:hover {
+  color: var(--brand-pink, #ff69b4);
 }
 
-/* Action Buttons Container */
-.navbar-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.btn-hire {
+  background-color: var(--brand-pink, #ff69b4);
+  color: #ffffff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  font-weight: 700;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
-/* Client Login Button */
-.btn-login {
-  background: transparent;
-  border: 2px solid var(--brand-blue);
-  color: var(--brand-blue);
-  padding: 0.5rem 1.2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.btn-hire:hover {
+  background-color: var(--brand-pink-hover, #e05599);
+  transform: translateY(-1px);
 }
 
-.btn-login:hover {
-  background-color: var(--brand-blue);
-  color: #ffffff;
+/* Hide mobile controls on desktop */
+.hamburger-toggle,
+.drawer-close-btn,
+.drawer-backdrop {
+  display: none;
 }
 
-/* Hire a Maid Button */
-.btn-signup {
-  background-color: var(--brand-pink);
-  border: 2px solid var(--brand-pink);
-  color: #ffffff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-signup:hover {
-  background-color: var(--brand-pink-hover);
-  border-color: var(--brand-pink-hover);
-}
-
-/* Responsive Styles */
+/* ==========================================
+   Mobile Responsive Styles
+   ========================================== */
 @media (max-width: 868px) {
   .top-bar {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .top-bar-content {
     flex-direction: column;
     gap: 0.3rem;
     text-align: center;
-    padding: 0.5rem 1rem;
   }
 
-  .navbar {
-    padding: 1rem 1.5rem;
+  .navbar-header {
+    padding: 0.8rem 1.2rem;
   }
 
-  .navbar-links {
-    display: none;
+  /* Hamburger Toggle Icon */
+  .hamburger-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 0.2rem;
+    line-height: 1;
+  }
+
+  /* Dark Backdrop Overlay */
+  .drawer-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .drawer-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 80% Slide-In Drawer */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--brand-dark-blue, #0b4f8a);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+    gap: 1.8rem;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    z-index: 1200;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .drawer-close-btn {
+    display: block;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    width: 100%;
+    display: block;
+  }
+
+  .btn-hire {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    box-sizing: border-box;
   }
 }
