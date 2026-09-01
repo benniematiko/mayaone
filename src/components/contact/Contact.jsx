@@ -125,7 +125,7 @@ const Contact = () => {
             <span className="mail-icon">✉️</span>
             <div>
               <span className="mail-label">Direct Email Inquiries</span>
-              <a href="mailto:hello@sheinwithlizz.com" className="mail-link">hello@sheinwithlizz.com</a>
+              <a href="mailto:hello@sheinwithlizz.com" className="mail-link">hello@yadove.com</a>
             </div>
           </div>
         </div>
